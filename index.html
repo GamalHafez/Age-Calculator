@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age-Calculator</title>
+    <link
+      rel="shortcut icon"
+      href="./images/calculator.ico"
+      type="image/x-icon"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <article class="card">
+        <input class="dark-theme-input" id="dark-theme" type="checkbox" />
+        <label
+          class="dark-theme-label"
+          for="dark-theme"
+          role="button"
+          tabindex="0"
+        ></label>
+
+        <form action="" method="get" class="inputs-form">
+          <div>
+            <label for="day" class="input-label">Day</label>
+            <input
+              class="input"
+              type="number"
+              name="day"
+              id="day"
+              min="1"
+              max="31"
+              placeholder="DD"
+              required
+            />
+            <p class="day-error-message">Must be a valid day</p>
+          </div>
+          <div>
+            <label for="month" class="input-label">Month</label>
+            <input
+              class="input"
+              type="number"
+              name="month"
+              id="month"
+              min="1"
+              max="12"
+              placeholder="MM"
+              required
+            />
+            <p class="month-error-message">Must be a valid month</p>
+          </div>
+          <div>
+            <label for="year" class="input-label">Year</label>
+            <input
+              class="input"
+              type="number"
+              name="year"
+              id="year"
+              min="1"
+              placeholder="YYYY"
+              required
+            />
+            <p class="year-error-message">Must be a valid year</p>
+          </div>
+
+          <div class="button-box">
+            <button type="submit" class="button">Calculate</button>
+          </div>
+        </form>
+
+        <h1 class="age-heading">
+          You are <span class="age">--</span> Years old
+        </h1>
+      </article>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
